@@ -1,0 +1,51 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "src",
+    "outDir": "build",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2020",
+    "module": "es2020",
+    "useDefineForClassFields": false,
+    "lib": ["es2020", "dom"],
+    "paths": {
+      "@assets/*": ["assets/*"],
+      "@core/*": ["app/core/*"],
+      "@env/*": ["environments/*"],
+      "@integration/*": ["app/integration/*"],
+      "@redux/*": ["app/redux/*"],
+      "@shared/*": ["app/shared/*"],
+      "@app/*": ["app/*"]
+    },
+    "resolveJsonModule": true
+  },
+  "exclude": [
+    "build/**",
+    "coverage/**",
+    "dist/**",
+    "docs/**",
+    "node_modules/**",
+    "src/**/__snapshots__/**",
+    "**/*.js",
+    "src/polyfills.ts",
+    "src/backend",
+    "src/polyfills.ts"
+  ],
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
+}

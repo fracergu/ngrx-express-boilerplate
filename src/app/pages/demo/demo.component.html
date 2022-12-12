@@ -1,0 +1,50 @@
+<div class="table-container">
+  <mat-progress-bar
+    *ngIf="usersLoading$ | async"
+    mode="indeterminate"
+  ></mat-progress-bar>
+  <ng-container *ngIf="usersLoaded$ | async">
+    <h2>Enjoy the Boilerplate. Happy coding!</h2>
+    <div class="flex">
+      <button mat-raised-button color="primary">
+        Karma replaced with Jest
+      </button>
+      <button mat-raised-button color="primary">Angular Material</button>
+      <button mat-raised-button color="primary">ESLint</button>
+      <button mat-raised-button color="primary">Express</button>
+      <button mat-raised-button color="primary">NgRx</button>
+      <button mat-raised-button color="primary">Lazy Loading</button>
+    </div>
+    <p>
+      The following table has been loaded from the internal server through Redux
+    </p>
+    <table
+      mat-table
+      [dataSource]="(users$ | async) || []"
+      class="mat-elevation-z8"
+    >
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <td mat-cell *matCellDef="let user">{{ user.id }}</td>
+      </ng-container>
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let user">{{ user.name }}</td>
+      </ng-container>
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef>Email</th>
+        <td mat-cell *matCellDef="let user">{{ user.email }}</td>
+      </ng-container>
+      <ng-container matColumnDef="phone">
+        <th mat-header-cell *matHeaderCellDef>Phone</th>
+        <td mat-cell *matCellDef="let user">{{ user.phone }}</td>
+      </ng-container>
+      <ng-container matColumnDef="company">
+        <th mat-header-cell *matHeaderCellDef>Company</th>
+        <td mat-cell *matCellDef="let user">{{ user.company.name }}</td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </ng-container>
+</div>

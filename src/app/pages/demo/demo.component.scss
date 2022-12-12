@@ -1,0 +1,40 @@
+p,
+h2 {
+  text-align: center;
+}
+
+mat-card-actopm {
+  justify-content: center;
+}
+
+.flex-subtitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table-container {
+  padding: 1em;
+}
+
+table.mat-table {
+  display: table;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1em;
+}
+.pill {
+  padding: 0.5em 1em;
+  border-radius: 15px;
+  background-color: #fcfcfc;
+  &:hover {
+    background-color: #e3f2fd;
+    transition: all 0.2s ease-in-out;
+  }
+}
